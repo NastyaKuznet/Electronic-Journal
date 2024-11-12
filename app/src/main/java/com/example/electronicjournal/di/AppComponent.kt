@@ -1,6 +1,7 @@
 package com.example.electronicjournal.di
 
 
+import com.example.electronicjournal.presenter.MainFragment
 import dagger.Component
 
 @Component(
@@ -9,6 +10,6 @@ import dagger.Component
     ]
 )
 interface AppComponent {
-    //abstract fun inject(fragment: MainFragment)
+    abstract fun inject(fragment: MainFragment)
 }
 

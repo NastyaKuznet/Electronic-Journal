@@ -8,6 +8,5 @@ import dagger.Module
         ViewModelModule::class,
         NetworkModule::class,
     ]
-
 )
 class AppModule{}
