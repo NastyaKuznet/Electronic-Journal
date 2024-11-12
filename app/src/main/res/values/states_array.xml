@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="states_array">
+        <item>Н</item>
+        <item>У</item>
+    </string-array>
+</resources>

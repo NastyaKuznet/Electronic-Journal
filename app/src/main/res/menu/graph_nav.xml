@@ -4,9 +4,14 @@
     <item
         android:id="@+id/it_today"
         android:title="Сегодня"
-        android:icon="@drawable/ic_android_black_24dp"/>
+        android:icon="@drawable/ic_android_black_24dp"
+        android:titleTextColor="@color/white"
+        android:iconTint="@color/white"
+        />
 
     <item
         android:id="@+id/it_week"
-        android:title="Неделя" />
+        android:iconTint="@color/white"
+        android:title="Неделя"
+        android:titleTextColor="@color/white"/>
 </menu>

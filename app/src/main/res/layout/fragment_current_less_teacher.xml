@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="16dp"
+            android:text="Английский язык"
+            android:textSize="26sp"/>
+
+        <TextView
+            android:id="@+id/tv_teacher_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="Староста"
+            android:textColor="@color/grayMid"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/et_teacher"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_edittext"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:textColorHint="@color/black"
+            android:hint="Абдулат Абдул Ассимович" />
+
+        <TextView
+            android:id="@+id/tv_state_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Состояние"
+            android:textColor="@color/grayMid"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/et_state"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_edittext"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:textColorHint="@color/red"
+            android:hint="Не подтверждено"
+            android:drawableEnd="@drawable/cansel"/>
+
+
+        <TextView
+            android:id="@+id/tv_group_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Группа"
+            android:textColor="@color/grayMid"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/tv_group"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_edittext"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:textColorHint="@color/black"
+            android:hint="ПрИ-202"/>
+
+        <TextView
+            android:id="@+id/tv_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Дата"
+            android:textColor="@color/grayMid"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/et_time"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_edittext"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:textColorHint="@color/black"
+            android:hint="28.10.2024 08:00"/>
+
+        <TableLayout
+            android:id="@+id/table_layout"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow style="@style/TableHeaderStyle">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="№"
+                    style="@style/TableHeaderItemStyle"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:gravity="center_horizontal"
+                    android:text="ФИО"
+                    style="@style/TableHeaderItemStyle"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:gravity="center_horizontal"
+                    android:text="Состояние"
+                    style="@style/TableHeaderItemStyle"/>
+            </TableRow>
+
+            <TableRow style="@style/TableRowStyle">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="1"
+                    style="@style/TableRowStyle"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:gravity="left"
+                    android:text="Иванов Иван Иванович"
+                    style="@style/TableRowStyle"/>
+                <Spinner
+                    android:id="@+id/spinner_1"
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:layout_gravity="right|end"
+                    android:entries="@array/states_array"
+                    style="@style/TableRowStyle"/>
+            </TableRow>
+
+            <TableRow style="@style/TableRowStyle">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="2"
+                    style="@style/TableRowStyle"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:gravity="left"
+                    android:text="Петров Петр Петрович"
+                    style="@style/TableRowStyle"/>
+                <Spinner
+                    android:id="@+id/spinner_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:layout_gravity="right|end"
+                    android:entries="@array/states_array"
+                    style="@style/TableRowStyle"/>
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/b_save"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_button"
+            android:textSize="20sp"
+            android:text="Сохранить" />
+        <Button
+            android:id="@+id/b_journal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_button"
+            android:textSize="20sp"
+            android:text="Просмотреть журнал" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
