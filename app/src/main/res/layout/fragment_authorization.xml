@@ -47,7 +47,7 @@
             android:padding="10dp"
             android:paddingStart="25dp"
             android:paddingEnd="25dp"
-            android:drawableEnd="@drawable/baseline_remove_red_eye_24"
+            android:drawableEnd="@drawable/eye_icon"
             android:textColor="@color/black" />
 
         <Button
