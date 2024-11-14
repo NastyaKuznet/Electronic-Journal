@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-<!--    <TextView-->
-<!--        android:id="@+id/tv_head"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="lesson"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"/>-->
-
+    android:layout_height="match_parent">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
-            android:text="Преподаватель"
+            android:text="Староста"
             android:textColor="@color/grayMid"
             android:textSize="16sp"/>
 
@@ -70,6 +61,29 @@
             android:textColorHint="@color/red"
             android:hint="Не подтверждено"
             android:drawableEnd="@drawable/cansel"/>
+
+
+        <TextView
+            android:id="@+id/tv_group_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Группа"
+            android:textColor="@color/grayMid"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/tv_group"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_edittext"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:textColorHint="@color/black"
+            android:hint="ПрИ-202"/>
 
         <TextView
             android:id="@+id/tv_time_label"

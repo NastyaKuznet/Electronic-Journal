@@ -2,11 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- не смотреть на то, как оно отображается здесь -->
     <item
+        android:id="@+id/it_teachers"
+        android:iconTint="@color/white"
+        android:title="Преподы"
+        android:icon="@drawable/teacher_icon"
+        android:titleTextColor="@color/white"/>
+    <item
         android:id="@+id/it_today"
-        android:title="Сегодня"
-        android:icon="@drawable/ic_android_black_24dp"/>
+        android:title="Посещаемость"
+        android:icon="@drawable/joirnal_icon"
+        android:titleTextColor="@color/white"
+        android:iconTint="@color/white"
+        />
 
     <item
-        android:id="@+id/it_week"
-        android:title="Неделя" />
+        android:id="@+id/it_account"
+        android:iconTint="@color/white"
+        android:icon="@drawable/account_icon"
+        android:title="Аккаунт"
+        android:titleTextColor="@color/white"/>
 </menu>
