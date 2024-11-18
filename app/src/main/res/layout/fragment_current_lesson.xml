@@ -3,29 +3,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<!--    <TextView-->
-<!--        android:id="@+id/tv_head"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="lesson"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"/>-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_head"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="lesson"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"/>-->
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp">
-
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginStart="16dp"
-            android:text="Английский язык"
-            android:textSize="26sp"/>
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/ib_back"
+                android:layout_height="48dp"
+                android:layout_width="48dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/arrow_2_icon"
+                android:contentDescription="Вернуться к журналу"/>
 
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="Английский язык"
+                android:layout_gravity="center_vertical"
+                android:textSize="26sp" />
+        </LinearLayout>
         <TextView
             android:id="@+id/tv_teacher_label"
             android:layout_width="wrap_content"
@@ -177,17 +187,17 @@
             android:background="@drawable/rounded_button"
             android:textSize="20sp"
             android:text="Сохранить" />
-        <Button
-            android:id="@+id/b_journal"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/rounded_button"
-            android:textSize="20sp"
-            android:text="Просмотреть журнал" />
+        <!--        <Button-->
+        <!--            android:id="@+id/b_journal"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:layout_marginStart="20dp"-->
+        <!--            android:layout_marginEnd="20dp"-->
+        <!--            android:layout_gravity="center_horizontal"-->
+        <!--            android:background="@drawable/rounded_button"-->
+        <!--            android:textSize="20sp"-->
+        <!--            android:text="Просмотреть журнал" />-->
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
