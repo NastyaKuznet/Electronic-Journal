@@ -34,6 +34,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -44,8 +48,6 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    implementation(libs.androidx.fragment)
-    implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.recyclerview)
 
     testImplementation(libs.junit)
@@ -59,4 +61,9 @@ dependencies {
     implementation ("com.google.dagger:dagger:2.52")
     kapt ("com.google.dagger:dagger-compiler:2.52")
 
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.2")
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.2")
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.8.2")
+
+    implementation("com.github.kirich1409:viewbindingpropertydelegate-full:1.5.9")
 }
