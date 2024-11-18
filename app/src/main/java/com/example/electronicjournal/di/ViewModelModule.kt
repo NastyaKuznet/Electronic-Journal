@@ -2,7 +2,7 @@ package com.example.electronicjournal.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.electronicjournal.presenter.MainViewModel
+import com.example.electronicjournal.presenter.authorization.AuthorizationViewModel
 
 import dagger.Binds
 import dagger.Module
@@ -16,6 +16,6 @@ interface ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(MainViewModel::class)
-    fun bindMainViewModel(vm: MainViewModel): ViewModel
+    @ViewModelKey(AuthorizationViewModel::class)
+    fun bindMainViewModel(vm: AuthorizationViewModel): ViewModel
 }

@@ -1,15 +1,17 @@
 package com.example.electronicjournal.di
 
 
-import com.example.electronicjournal.presenter.MainFragment
+import com.example.electronicjournal.presenter.authorization.AuthorizationFragment
 import dagger.Component
 
 @Component(
     modules = [
-        AppModule::class,
+        AppBindModule::class,
+        ViewModelModule::class,
+        NetworkModule::class,
     ]
 )
 interface AppComponent {
-    abstract fun inject(fragment: MainFragment)
+     abstract fun inject(fragment: AuthorizationFragment)
 }
 
