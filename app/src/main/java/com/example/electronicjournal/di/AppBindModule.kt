@@ -1,8 +1,7 @@
 package com.example.electronicjournal.di
 
 import com.example.electronicjournal.data.network.repositories.*
-import com.example.electronicjournal.domain.AuthorizationUseCase
-import com.example.electronicjournal.domain.AuthorizationUseCaseImpl
+import com.example.electronicjournal.domain.*
 import dagger.Binds
 import dagger.Module
 
@@ -14,4 +13,7 @@ interface AppBindModule {
 
     @Binds
     fun bindAuthorizationUseCase(repository: AuthorizationUseCaseImpl): AuthorizationUseCase
+
+    @Binds
+    fun bindGetTimetableUserCase(repository: GetCurrentTimetableUseCaseImpl): GetCurrentTimetableUseCase
 }

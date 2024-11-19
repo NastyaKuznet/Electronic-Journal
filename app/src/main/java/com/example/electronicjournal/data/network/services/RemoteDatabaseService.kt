@@ -2,7 +2,6 @@ package com.example.electronicjournal.data.network.services
 
 import com.example.electronicjournal.data.module.*
 import com.example.electronicjournal.data.network.entities.requestBody.*
-import com.example.electronicjournal.data.network.entities.response.*
 import retrofit2.http.*
 
 interface RemoteDatabaseService {
@@ -17,7 +16,7 @@ interface RemoteDatabaseService {
     suspend fun attendanceDone(@Body requestBody: AttendanceDoneBody)
 
     @POST("/time-table")
-    suspend fun getTimeTable(@Body requestBody: GroupIdBody): TimeTableResponse // не тестила
+    suspend fun getTimeTable(@Body requestBody: GroupIdBody): List<Lesson>
 
     @POST("/teachers")
     suspend fun getTeachers(@Body requestBody: GroupIdBody): List<Teacher>

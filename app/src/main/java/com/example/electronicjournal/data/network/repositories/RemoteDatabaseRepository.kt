@@ -1,11 +1,11 @@
 package com.example.electronicjournal.data.network.repositories
 
 import com.example.electronicjournal.data.module.Attendance
+import com.example.electronicjournal.data.module.Lesson
 import com.example.electronicjournal.data.module.Student
 import com.example.electronicjournal.data.module.Teacher
 import com.example.electronicjournal.data.network.entities.ResultUser
 import com.example.electronicjournal.data.network.entities.requestBody.*
-import com.example.electronicjournal.data.network.entities.response.*
 import com.example.electronicjournal.data.network.services.RemoteDatabaseService
 import retrofit2.HttpException
 import javax.inject.Inject
@@ -15,16 +15,30 @@ interface RemoteDatabaseRepository {
     suspend fun authorization(email: String, password: String): ResultUser
     suspend fun createAttendance(classId: Int, timedate: String): Attendance
     suspend fun attendanceDone(attendanceId: Int, students: List<AttendanceStudentBody>): Boolean //
-    suspend fun getTimeTable(groupId: Int): TimeTableResponse //
+    suspend fun getTimeTable(groupId: Int): List<Lesson>
     suspend fun getTeachers(groupId: Int): List<Teacher>
 }
 
 class RemoteDatabaseRepositoryImpl @Inject constructor(
     private val service: RemoteDatabaseService,
 ): RemoteDatabaseRepository {
+
     override suspend fun authorization(email: String, password: String): ResultUser {
         try {
             val user = service.authorization(AuthorizationBody(email, password))
+            if(user.isEmpty()){
+                return ResultUser(
+                    Student(
+                        0,
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        false,
+                        0
+                    ), false)
+            }
             return ResultUser(user[0], true)
         } catch (e: HttpException){
             if (e.code() == 404){
@@ -68,7 +82,7 @@ class RemoteDatabaseRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun getTimeTable(groupId: Int): TimeTableResponse {
+    override suspend fun getTimeTable(groupId: Int): List<Lesson> {
         try {
             return service.getTimeTable(GroupIdBody(groupId))
         } catch (e: HttpException){
