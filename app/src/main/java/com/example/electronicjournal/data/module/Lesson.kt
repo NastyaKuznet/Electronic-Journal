@@ -9,4 +9,7 @@ data class Lesson(
     val classroom: String,
     val lesson: String,
     val type_lesson: String,
+    val name: String,
+    val lastname: String,
+    val patronymic: String,
 )

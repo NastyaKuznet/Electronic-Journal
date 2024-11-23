@@ -3,6 +3,7 @@ package com.example.electronicjournal.di
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.electronicjournal.presenter.authorization.AuthorizationViewModel
+import com.example.electronicjournal.presenter.currentLesson.CurrentLessonViewModel
 import com.example.electronicjournal.presenter.journal.JournalViewModel
 
 import dagger.Binds
@@ -24,4 +25,9 @@ interface ViewModelModule {
     @IntoMap
     @ViewModelKey(JournalViewModel::class)
     fun bindJournalViewModel(vm: JournalViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(CurrentLessonViewModel::class)
+    fun bindCurrentLessonViewModel(vm: CurrentLessonViewModel): ViewModel
 }

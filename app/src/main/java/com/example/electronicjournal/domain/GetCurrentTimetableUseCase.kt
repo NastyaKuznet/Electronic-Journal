@@ -10,7 +10,7 @@ interface GetCurrentTimetableUseCase {
     suspend operator fun invoke(groupId: Int): MutableMap<String, MutableList<Lesson>>
 }
 
-open class GetCurrentTimetableUseCaseImpl @Inject constructor(
+class GetCurrentTimetableUseCaseImpl @Inject constructor(
     private val remoteDatabaseRepository: RemoteDatabaseRepository
 ): GetCurrentTimetableUseCase {
 

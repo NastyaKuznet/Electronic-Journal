@@ -5,7 +5,7 @@
     app:startDestination="@id/currentLessonFragment">
     <fragment
         android:id="@+id/currentLessonFragment"
-        android:name="com.example.electronicjournal.presenter.CurrentLessonFragment"
+        android:name="com.example.electronicjournal.presenter.currentLesson.CurrentLessonFragment"
         android:label="CurrentLessonFragment" >
         <action
             android:id="@+id/action_currentLessonFragment_to_journalFragment"

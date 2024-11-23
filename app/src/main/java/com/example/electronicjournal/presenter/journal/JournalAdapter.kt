@@ -10,7 +10,10 @@ import com.example.electronicjournal.presenter.journal.journalElements.JournalVi
 import com.example.electronicjournal.databinding.ItemDayBinding
 import com.example.electronicjournal.databinding.ItemLessonBinding
 
-class JournalAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
+class JournalAdapter(
+    private val listener: Listener,
+): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var listItems = mutableListOf<JournalItem>()
 
@@ -51,7 +54,7 @@ class JournalAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(holder){
-            is LessonViewHolder -> holder.bind(listItems[position] as JournalLesson)
+            is LessonViewHolder -> holder.bind(listItems[position] as JournalLesson, listener)
             is DayViewHolder -> holder.bind(listItems[position] as JournalDay)
         }
     }
@@ -60,7 +63,7 @@ class JournalAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         private val binding: ItemLessonBinding
     ): RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(lesson: JournalLesson) {
+        fun bind(lesson: JournalLesson, listener: Listener) {
             with(binding) {
                 lesson.run {
                     tvTimeStart.text = timeStart
@@ -68,7 +71,9 @@ class JournalAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     tvTypeLesson.text = nameLesson
                     tvTypeLess.text = typeLesson
                     tvRoomLesson.text = room
-
+                    ibGoToLesson.setOnClickListener {
+                        listener.onClick(lesson)
+                    }
                 }
             }
         }
@@ -81,8 +86,13 @@ class JournalAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             with(binding){
                 day.run {
                     tvDay.text = nameDay
+                    tvDate.text = date
                 }
             }
         }
+    }
+
+    interface Listener{
+        fun onClick(lesson: JournalLesson)
     }
 }

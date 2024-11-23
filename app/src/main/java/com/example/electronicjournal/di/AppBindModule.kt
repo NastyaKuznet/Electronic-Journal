@@ -16,4 +16,19 @@ interface AppBindModule {
 
     @Binds
     fun bindGetTimetableUserCase(repository: GetCurrentTimetableUseCaseImpl): GetCurrentTimetableUseCase
+
+    @Binds
+    fun bindGetStudentsUseCase(repository: GetStudentsUseCaseImpl): GetStudentsUseCase
+
+    @Binds
+    fun bindCreateAttendanceUseCase(repository: CreateAttendanceUseCaseImpl): CreateAttendanceUseCase
+
+    @Binds
+    fun bindCurrentDatesWeekUseCase(repository: CurrentDatesWeekUseCaseImpl): CurrentDatesWeekUseCase
+
+    @Binds
+    fun bindDoneAttendanceUseCase(repository: DoneAttendanceUseCaseImpl): DoneAttendanceUseCase
+
+    @Binds
+    fun bindOpenAttendance(repository: OpenAttendanceUseCaseImpl): OpenAttendanceUseCase
 }

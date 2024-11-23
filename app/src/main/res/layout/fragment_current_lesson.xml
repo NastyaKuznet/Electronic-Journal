@@ -10,7 +10,9 @@
     <!--        android:text="lesson"-->
     <!--        app:layout_constraintTop_toTopOf="parent"-->
     <!--        app:layout_constraintStart_toStartOf="parent"/>-->
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -46,19 +48,20 @@
             android:textColor="@color/grayMid"
             android:textSize="16sp"/>
 
-        <EditText
+        <TextView
             android:id="@+id/et_teacher"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/custom_edittext"
             android:layout_marginTop="5dp"
-            android:padding="10dp"
+            android:padding="20dp"
             android:paddingStart="25dp"
             android:paddingEnd="25dp"
             android:textColorHint="@color/black"
+            android:textSize="16dp"
             android:hint="Абдулат Абдул Ассимович" />
 
-        <TextView
+        <!--<TextView
             android:id="@+id/tv_state_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -79,7 +82,7 @@
             android:paddingEnd="25dp"
             android:textColorHint="@color/red"
             android:hint="Не подтверждено"
-            android:drawableEnd="@drawable/cansel"/>
+            android:drawableEnd="@drawable/cansel"/>-->
 
         <TextView
             android:id="@+id/tv_time_label"
@@ -91,16 +94,17 @@
             android:textColor="@color/grayMid"
             android:textSize="16sp"/>
 
-        <EditText
+        <TextView
             android:id="@+id/et_time"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/custom_edittext"
             android:layout_marginTop="5dp"
-            android:padding="10dp"
+            android:padding="20dp"
             android:paddingStart="25dp"
             android:paddingEnd="25dp"
             android:textColorHint="@color/black"
+            android:textSize="16dp"
             android:hint="28.10.2024 08:00"/>
 
         <TableLayout
@@ -130,50 +134,6 @@
                     android:text="Состояние"
                     style="@style/TableHeaderItemStyle"/>
             </TableRow>
-
-            <TableRow style="@style/TableRowStyle">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:text="1"
-                    style="@style/TableRowStyle"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="7"
-                    android:gravity="left"
-                    android:text="Иванов Иван Иванович"
-                    style="@style/TableRowStyle"/>
-                <Spinner
-                    android:id="@+id/spinner_1"
-                    android:layout_width="0dp"
-                    android:layout_weight="7"
-                    android:layout_gravity="right|end"
-                    android:entries="@array/states_array"
-                    style="@style/TableRowStyle"/>
-            </TableRow>
-
-            <TableRow style="@style/TableRowStyle">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:text="2"
-                    style="@style/TableRowStyle"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="7"
-                    android:gravity="left"
-                    android:text="Петров Петр Петрович"
-                    style="@style/TableRowStyle"/>
-                <Spinner
-                    android:id="@+id/spinner_2"
-                    android:layout_width="0dp"
-                    android:layout_weight="7"
-                    android:layout_gravity="right|end"
-                    android:entries="@array/states_array"
-                    style="@style/TableRowStyle"/>
-            </TableRow>
         </TableLayout>
 
         <Button
@@ -198,6 +158,7 @@
         <!--            android:background="@drawable/rounded_button"-->
         <!--            android:textSize="20sp"-->
         <!--            android:text="Просмотреть журнал" />-->
-
     </LinearLayout>
+
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

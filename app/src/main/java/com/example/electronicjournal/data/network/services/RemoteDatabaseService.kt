@@ -10,14 +10,20 @@ interface RemoteDatabaseService {
     suspend fun authorization(@Body requestBody: AuthorizationBody): List<Student>
 
     @POST("/create-attendance")
-    suspend fun createAttendance(@Body requestBody: CreationAttendanceBody): List<Attendance>
-
-    @POST("/attendance-done")
-    suspend fun attendanceDone(@Body requestBody: AttendanceDoneBody)
+    suspend fun createAttendance(@Body requestBody: CreationOpenAttendanceBody): List<Attendance>
 
     @POST("/time-table")
     suspend fun getTimeTable(@Body requestBody: GroupIdBody): List<Lesson>
 
     @POST("/teachers")
     suspend fun getTeachers(@Body requestBody: GroupIdBody): List<Teacher>
+
+    @POST("/students")
+    suspend fun getStudents(@Body requestBody: GroupIdBody): List<Student>
+
+    @POST("/attendancedone")
+    suspend fun attendanceDone(@Body requestBody: AttendanceDoneBody)
+
+    @POST("/open-attendance")
+    suspend fun attendanceOpen(@Body requestBody: CreationOpenAttendanceBody): List<AttendanceStudent>
 }
