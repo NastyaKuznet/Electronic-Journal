@@ -47,20 +47,28 @@
             android:padding="10dp"
             android:paddingStart="25dp"
             android:paddingEnd="25dp"
-            android:drawableEnd="@drawable/eye_icon"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:inputType="textPassword"/>
 
-        <Button
-            android:id="@+id/b_input"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/b_input2"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/rounded_button"
-            android:textSize="20sp"
-            android:text="Войти" />
+            android:background="@drawable/rounded_button">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Войти"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </LinearLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

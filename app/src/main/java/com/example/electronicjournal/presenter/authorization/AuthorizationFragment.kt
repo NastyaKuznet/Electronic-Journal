@@ -15,6 +15,7 @@ import com.example.electronicjournal.di.appComponent
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import androidx.navigation.fragment.findNavController
+import com.example.electronicjournal.data.module.Student
 import com.example.electronicjournal.presenter.models.ResultUIState
 
 class AuthorizationFragment: Fragment(R.layout.fragment_authorization) {
@@ -28,7 +29,7 @@ class AuthorizationFragment: Fragment(R.layout.fragment_authorization) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         with(binding){
-            bInput.setOnClickListener {
+            bInput2.setOnClickListener {
                 viewModel.registration(
                     etLogin.text.toString(),
                     etPassword.text.toString())
@@ -36,12 +37,16 @@ class AuthorizationFragment: Fragment(R.layout.fragment_authorization) {
                     viewModel.uiState.collect { uiState ->
                         when (uiState.resultUIState) {
                             ResultUIState.Success -> {
-                                Toast.makeText(requireContext(), "good", Toast.LENGTH_LONG).show()
-                                val bundle = Bundle()
-                                bundle.putInt("userId", uiState.user.id)
-                                findNavController().navigate(
-                                    R.id.rootFragment,
-                                    bundle)
+                                //Toast.makeText(requireContext(), "good", Toast.LENGTH_LONG).show()
+                                if(uiState.user is Student){
+                                    val bundle = Bundle()
+                                    bundle.putInt("userId", uiState.user.id)
+                                    bundle.putInt("groupId", uiState.user.id_group)
+                                    findNavController().navigate( //Исправить для любого типа пользователя!!!
+                                        R.id.rootFragment,
+                                        bundle)
+                                }
+
                             }
                             ResultUIState.Error -> {
                                 Toast.makeText(requireContext(), "Такого пользователя нет", Toast.LENGTH_LONG).show()

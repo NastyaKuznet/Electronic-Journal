@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- не смотреть на то, как оно отображается здесь -->
-    <item
+
+    <!--<item
         android:id="@+id/it_teachers"
-        android:iconTint="@color/white"
         android:title="Преподы"
-        android:icon="@drawable/teacher_icon"
-        android:titleTextColor="@color/white"/>
+        android:icon="@drawable/teacher_icon"/>-->
     <item
         android:id="@+id/it_today"
         android:title="Посещаемость"
-        android:icon="@drawable/joirnal_icon"
-        android:titleTextColor="@color/white"
-        android:iconTint="@color/white"
-        />
+        android:icon="@drawable/joirnal_icon"/>
 
-    <item
+    <!--<item
         android:id="@+id/it_account"
-        android:iconTint="@color/white"
         android:icon="@drawable/account_icon"
-        android:title="Аккаунт"
-        android:titleTextColor="@color/white"/>
+        android:title="Аккаунт"/>-->
 </menu>
