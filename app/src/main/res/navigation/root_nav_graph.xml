@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_nav_graph"
+    app:startDestination="@id/currentLessonFragment">
+    <fragment
+        android:id="@+id/currentLessonFragment"
+        android:name="com.example.electronicjournal.presenter.currentLesson.CurrentLessonFragment"
+        android:label="CurrentLessonFragment" >
+        <action
+            android:id="@+id/action_currentLessonFragment_to_journalFragment"
+            app:destination="@id/journalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/journalFragment"
+        android:name="com.example.electronicjournal.presenter.journal.JournalFragment"
+        android:label="JournalFragment" >
+        <action
+            android:id="@+id/action_journalFragment_to_currentLessonFragment"
+            app:destination="@id/currentLessonFragment" />
+    </fragment>
+</navigation>

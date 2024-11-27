@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- не смотреть на то, как оно отображается здесь -->
+
+    <!--<item
+        android:id="@+id/it_teachers"
+        android:title="Преподы"
+        android:icon="@drawable/teacher_icon"/>-->
     <item
         android:id="@+id/it_today"
-        android:title="Сегодня"
-        android:icon="@drawable/ic_android_black_24dp"/>
+        android:title="Посещаемость"
+        android:icon="@drawable/joirnal_icon"/>
 
-    <item
-        android:id="@+id/it_week"
-        android:title="Неделя" />
+    <!--<item
+        android:id="@+id/it_account"
+        android:icon="@drawable/account_icon"
+        android:title="Аккаунт"/>-->
 </menu>
